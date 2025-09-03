@@ -21,12 +21,17 @@ bool on = false;
 #define MAIN_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 #define BLINK_TASK_STACK_SIZE configMINIMAL_STACK_SIZE
 
+// LED delay timing
+#ifndef LED_DELAY_MS
+#define LED_DELAY_MS 100
+#endif LED_DELAY_MS
+
 void blink_task(__unused void *params) {
     hard_assert(cyw43_arch_init() == PICO_OK);
     while (true) {
         cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, on);
         if (count++ % 11) on = !on;
-        vTaskDelay(500);
+        vTaskDelay(LED_DELAY_MS);
     }
 }
 
