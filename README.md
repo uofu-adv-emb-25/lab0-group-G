@@ -1,1 +1,1 @@
-![Group G Badge](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/main.yml/badge.svg)
+![Group G Badge](https://github.com/uofu-adv-emb-25/lab0-group-G/actions/workflows/main.yml/badge.svg)
